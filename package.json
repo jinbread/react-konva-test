@@ -1,11 +1,14 @@
 {
-  "name": "two-test-app",
+  "name": "konva-test-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "konva": "^2.6.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
-    "react-scripts": "2.1.5"
+    "react-konva": "^16.8.0",
+    "react-scripts": "2.1.5",
+    "two.js": "^0.7.0-beta.3"
   },
   "scripts": {
     "start": "react-scripts start",
