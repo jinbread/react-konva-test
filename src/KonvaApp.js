@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Konva from 'konva';
-import { Stage, Layer, Star, Line } from 'react-konva';
+import { Stage, Layer, Star, Rect } from 'react-konva';
 
 class KonvaApp extends Component {
   handleDragStart = e => {
@@ -47,14 +47,19 @@ class KonvaApp extends Component {
             />
           ))}
           {[...Array(40)].map(i => (
-            <Line 
+            <Rect 
               key={i}
               x={Math.random() * window.innerWidth}
               y={Math.random() * window.innerWidth}
-              points={[Math.random() *73, Math.random() *100, Math.random() *340, 23]}
-              stroke="#241BE4"
+              width={60}
+              height={60}
+              fill="#241BE4"
               tension={1}
+              opacity={0.9}
               draggable
+              shadowBlur={10}
+              shadowOpacity={0.3}
+              rotation={Math.random() * 180}
               onDragStart={this.handleDragStart}
               onDragEnd={this.handleDragEnd} 
             />
